@@ -8,14 +8,44 @@ body{
   background-color: black;
   display: flex;
   justify-content: center;
+  display: flex;
+  overflow: hidden;
 }
 
-body h1{
-  color: white;
+.me_img{
   height: auto;
   width: auto;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: auto;
-  margin-bottom: auto;
+  position: absolute;
+  bottom: -100px;
+}
+
+.left_screen, .right_screen{
+  width: 50%;
+  height: 100%;
+  display: flex;
+}
+
+.right_screen{
+  justify-content: center;  
+}
+
+.left_screen h1{
+  color: white;
   font-weight: bold;
-  text-align: center;
+  font-size: 70px;
+}
+
+.left_screen h3{
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.welcome_text{
+  height: auto;
+  width: auto;
+  margin: auto;
 }
