@@ -2,60 +2,36 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Henry MONT</title>
+    <title>HM</title>
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="assets/img/icon.png">
 
-    <!-- 3d hover css and js -->
-    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
   </head>
-  <body id="listener-remote" class="listener small pointer">
+  <body>
 
     <!-- content -->
-    <div class="left_screen">
-      <div class="welcome_text">
-        <h1>Hi there ! </h1>
-        <h3>My name is Henry, <br>I'm studying computer science.</h3>
+    <div class="navbar">
+      <div><h3>Henry MONT</3></div>
+      <ul>
+        <li><a href="mailto:32devstudio@protonmail.com"><img src="assets/img/mail.png" alt="mail icon"></a></li>
+        <li><a href="https://www.linkedin.com/in/henry-mont-30b6971a6/"><img src="assets/img/linkedin.png" alt="linkedin icon"></a></li>
+        <li><a href="https://www.facebook.com/henry.mnt.7/"><img src="assets/img/facebook.png" alt="facebook icon"></a></li>
+        <li><a href="https://www.instagram.com/32devstudio/"><img src="assets/img/instagram.png" alt="instagram icon"></a></li>
+      </ul>
+    </div>
+    <div class="container">
+      <div class="left_screen">
+        <div class="welcome_text">
+          <h1>Hi there ! </h1>
+          <h3>My name is Henry, <br>I'm studying computer science.</h3>
+        </div>
+      </div>
+      <div class="right_screen">
+        <div class="me_img">
+          <img src="assets/img/me_color_cropped.png" alt="" width="400px" height="auto">
+        </div>
       </div>
     </div>
-    <div class="right_screen">
-      <div class="me_img plate" id="plate-remote" style="transform: perspective(500px) rotateX(0deg) rotateY(0deg);">
-        <img src="assets/img/me_color_cropped.png" alt="" width="400px" height="auto">
-      </div>
-    </div>
-
-    <!-- scripts -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="jquery.plate.js"></script>
-    <script>
-        $('#plate-default').plate();
-        $('#plate-inverse').plate({
-            inverse: true
-        });
-        $('#plate-custom').plate({
-            perspective: 200,
-            maxRotation: 20,
-            animationDuration: 100
-        });
-        $('#listener-contained').plate({
-            element: '#plate-contained'
-        });
-        $('#listener-remote').plate({
-            element: $('#plate-remote')
-        });
-    </script>
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-36251023-1']);
-      _gaq.push(['_setDomainName', 'jqueryscript.net']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
   </body>
 </html>
