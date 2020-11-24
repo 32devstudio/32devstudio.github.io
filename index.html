@@ -4,11 +4,12 @@
     <meta charset="utf-8">
     <title>HM</title>
 
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="assets/img/icon.png">
 
   </head>
-  <body>
+  <body id="listener-remote" class="pointer">
 
     <!-- content -->
     <div class="navbar">
@@ -28,10 +29,17 @@
         </div>
       </div>
       <div class="right_screen">
-        <div class="me_img">
+        <div class="me_img" id="plate-remote">
           <img src="assets/img/me_color_cropped.png" alt="" width="400px" height="auto">
         </div>
       </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="js/jquery.plate.js"></script>
+    <script>
+        $('#listener-remote').plate({
+            element: $('#plate-remote')
+        });
+    </script>
   </body>
 </html>

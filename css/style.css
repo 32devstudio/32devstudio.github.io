@@ -32,7 +32,17 @@ ul{
 
 ul li{
   float: left;
-  margin-right: 20px;
+  margin-left: 20px;
+}
+
+ul li a img{
+  height: auto;
+  width: auto;
+  transition: transform 330ms ease-in-out;
+}
+
+ul li a img:hover{
+  transform: translate(0px, -10px);
 }
 
 .container{
@@ -53,6 +63,7 @@ ul li{
   height: auto;
   margin-top: auto;
   margin-bottom: auto;
+  padding-bottom: 100px;
 }
 
 .left_screen .welcome_text h1{
@@ -67,4 +78,19 @@ ul li{
 .right_screen{
   display: flex;
   justify-content: center;
+}
+
+.me_img{
+  position: absolute;
+  bottom: -50px;
+}
+
+/*
+---------------------------------------------
+3D hover effect
+---------------------------------------------
+*/
+
+.pointer {
+  cursor: pointer;
 }
