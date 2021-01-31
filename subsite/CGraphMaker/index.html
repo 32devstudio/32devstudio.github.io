@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <title>CGraphMaker</title>
+
+    <link rel="icon" type="image/png" href="img/appLogo.png" />
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <script src="js/all.min.js" charset="utf-8"></script>
+  </head>
+  <body onload="firstCall()">
+    <!-- Toolbar -->
+    <nav>
+      <div class="logo">
+        <h1>CGraphMaker</h1>
+      </div>
+      <div class="tools">
+        <button type="button" name="circle" id="button_circle" onclick="setTool('circle')"> <i class="far fa-circle"></i> </button>
+        <button type="button" name="square" id="button_square" onclick="setTool('square')"> <i class="far fa-square"></i> </button>
+        <button type="button" name="diamond" id="button_diamond" onclick="setTool('diamond')"> <i class="far fa-square rotated"></i> </button>
+        <button type="button" name="link" id="button_link" onclick="setTool('link')"> <i class="fas fa-project-diagram"></i> </button>
+        <button type="button" name="select" id="button_cursor" onclick="setTool('cursor')"> <i class="fas fa-mouse-pointer"></i> </button>
+        <button type="button" name="select" id="button_eraser" onclick="setTool('eraser')"> <i class="fas fa-eraser"></i> </button>
+      </div>
+    </nav>
+
+    <!-- Part of the screen where the graph is being drawn -->
+    <div id="canvas" onmousedown="canvasClick()">
+      <div id="inputBox">
+        <div id="inputBoxHeader">
+          Node Caption (max 3 line)
+        </div>
+        <textarea name="node_text" rows="8" cols="20" id="inputField"></textarea>
+        <button type="button" name="button" id="inputButton" onclick="getCaption()">Save</button>
+      </div>
+
+      <div id="helpBox" onmousedown="clickBlock()">
+        <div id="helpBoxHeader"></div>
+        <div id="helpBoxContent"></div>
+      </div>
+      <button type="button" name="button" id="helpButton" onclick="toogleHelp()" onmousedown="clickBlock()"><i class="far fa-question-circle"></i></button>
+
+      <div id="selfPromotion" onmousedown="clickBlock()">
+        <a href="https://github.com/32devstudio/CGraphMaker"><i class="fas fa-star"></i> Star on Github</a>
+      </div>
+
+      <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" id="svgContainer">
+        <defs>
+            <marker id="markerArrow" markerWidth="13" markerHeight="13" refX="9" refY="6"
+                   orient="auto">
+                <path d="M2,2 L2,11 L10,6 L2,2" style="fill: #000000;" />
+            </marker>
+        </defs>
+      </svg>
+
+    </div>
+    <script src="js/script.js" charset="utf-8"></script>
+  </body>
+</html>
