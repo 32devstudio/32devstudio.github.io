@@ -11,7 +11,7 @@ html, body{
 }
 
 .navbar{
-  height: auto;
+  height: 80px;
   width: 100%;
   padding-top: 10px;
   display: flex;
@@ -46,12 +46,15 @@ ul li a img:hover{
 }
 
 .container{
+  height: 100%;
   flex-basis: 100%;
   display: flex;
+  flex-direction: row;
 }
 
 .left_screen, .right_screen{
   width: 50%;
+  height: auto;
 }
 
 .left_screen{
@@ -83,6 +86,18 @@ ul li a img:hover{
 .me_img{
   position: absolute;
   bottom: -50px;
+}
+
+@media (max-width: 800px) {
+  .container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left_screen, .right_screen{
+    width: 100%;
+    height: 50%;
+  }
 }
 
 /*
